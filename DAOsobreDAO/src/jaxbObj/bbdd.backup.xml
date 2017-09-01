@@ -1,0 +1,44 @@
+<practica2>
+  <Personas>
+    <Empleats>
+      <!--Zero or more repetitions:-->
+      <Empleat>
+        <id>10000000</id>
+        <nom>string</nom>
+        <cognoms>string</cognoms>
+        <anys_treballats>51</anys_treballats>
+        <sou>1.5E2</sou>
+      </Empleat>
+    </Empleats>
+    <Clients>
+      <!--Zero or more repetitions:-->
+      <Client>
+        <nif>string</nif>
+        <nom>string</nom>
+        <cognoms>string</cognoms>
+      </Client>
+    </Clients>
+  </Personas>
+  <Facturacio>
+    <!--Zero or more repetitions:-->
+    <Factura data="2008-09-29" hora="23" minut="59" segon="59">
+      <client>string</client>
+      <productes>
+        <!--Zero or more repetitions:-->
+        <id preu_unitat_sense_iva="1.5E2" unitats="5" iva="4">2</id>
+      </productes>
+      <sense_iva>1.5E2</sense_iva>
+      <iva>0</iva>
+      <total>1.051732E7</total>
+    </Factura>
+  </Facturacio>
+  <Cataleg>
+    <!--Zero or more repetitions:-->
+    <producte>
+      <id>5</id>
+      <nom>string</nom>
+      <preu>1.5E2</preu>
+      <stock>5</stock>
+    </producte>
+  </Cataleg>
+</practica2>

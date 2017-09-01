@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<practica2>
+    <Personas>
+        <Empleats>
+            <Empleat>
+                <id>14270729</id>
+                <nom>Pau</nom>
+                <cognoms>Iglesias</cognoms>
+                <anys_treballats>2</anys_treballats>
+                <sou>1269.2</sou>
+            </Empleat>
+            <Empleat>
+                <id>14980765</id>
+                <nom>Joe</nom>
+                <cognoms>Acopoloudos</cognoms>
+                <anys_treballats>12</anys_treballats>
+                <sou>1345.4</sou>
+            </Empleat>
+            <Empleat>
+                <id>10987687</id>
+                <nom>Bermes</nom>
+                <cognoms>Carlos Solelo</cognoms>
+                <anys_treballats>8</anys_treballats>
+                <sou>789.3</sou>
+            </Empleat>
+            <Empleat>
+                <id>78268722</id>
+                <nom>Arturo</nom>
+                <cognoms>Calabazas Bono</cognoms>
+                <anys_treballats>1</anys_treballats>
+                <sou>22319.3</sou>
+            </Empleat>
+        </Empleats>
+        <Clients>
+            <Client>
+                <nif>14270729b</nif>
+                <nom>Jusa</nom>
+                <cognoms>Claramunt Copernic</cognoms>
+            </Client>
+            <Client>
+                <nif>56709876h</nif>
+                <nom>Marcos</nom>
+                <cognoms>Aurelia Claudia</cognoms>
+            </Client>
+            <Client>
+                <nif>nouClient</nif>
+                <nom>Pablo</nom>
+                <cognoms>Albaran</cognoms>
+            </Client>
+            <Client>
+                <nif>18</nif>
+                <nom>Jesuli</nom>
+                <cognoms>Amparo</cognoms>
+            </Client>
+            <Client>
+                <nif>45237076</nif>
+                <nom>Jan</nom>
+                <cognoms>Heredia Gómez</cognoms>
+            </Client>
+        </Clients>
+    </Personas>
+    <Facturacio>
+        <Factura data="2017-08-31+02:00" hora="20" minut="10" segon="32">
+            <client>14270729b</client>
+            <productes>
+                <id preu_unitat_sense_iva="1.07" unitats="2" iva="21">8</id>
+            </productes>
+            <sense_iva>2.14</sense_iva>
+            <iva>0.44940004</iva>
+            <total>2.589400053024292</total>
+        </Factura>
+        <Factura data="2017-08-31+02:00" hora="20" minut="10" segon="58">
+            <client>56709876h</client>
+            <productes>
+                <id preu_unitat_sense_iva="6.2" unitats="2" iva="4">22</id>
+            </productes>
+            <sense_iva>12.4</sense_iva>
+            <iva>0.496</iva>
+            <total>12.895999908447266</total>
+        </Factura>
+        <Factura data="2017-08-31+02:00" hora="20" minut="11" segon="50">
+            <client>nouClient</client>
+            <productes>
+                <id preu_unitat_sense_iva="1.07" unitats="1" iva="21">8</id>
+                <id preu_unitat_sense_iva="6.2" unitats="4" iva="4">22</id>
+            </productes>
+            <sense_iva>25.869999</sense_iva>
+            <iva>0.99424696</iva>
+            <total>26.864246368408203</total>
+        </Factura>
+        <Factura data="2017-08-31+02:00" hora="20" minut="12" segon="46">
+            <client>45237076</client>
+            <productes>
+                <id preu_unitat_sense_iva="1.07" unitats="1" iva="21">8</id>
+                <id preu_unitat_sense_iva="1.0" unitats="11" iva="21">500</id>
+                <id preu_unitat_sense_iva="6.2" unitats="1" iva="4">22</id>
+            </productes>
+            <sense_iva>18.27</sense_iva>
+            <iva>0.27112246</iva>
+            <total>18.541122436523438</total>
+        </Factura>
+        <Factura data="2017-08-31+02:00" hora="20" minut="15" segon="23">
+            <client>nouClient</client>
+            <productes>
+                <id preu_unitat_sense_iva="1.07" unitats="6" iva="21">8</id>
+            </productes>
+            <sense_iva>6.42</sense_iva>
+            <iva>1.3482001</iva>
+            <total>7.768199920654297</total>
+        </Factura>
+    </Facturacio>
+    <Cataleg>
+        <producte>
+            <id>8</id>
+            <nom>Cocacola subzero 2L</nom>
+            <preu>1.07</preu>
+            <stock>457</stock>
+        </producte>
+        <producte>
+            <id>500</id>
+            <nom>Cocaloca</nom>
+            <preu>1.0</preu>
+            <stock>209</stock>
+        </producte>
+        <producte>
+            <id>22</id>
+            <nom>Papel higiénico ColoChabola</nom>
+            <preu>6.2</preu>
+            <stock>100</stock>
+        </producte>
+    </Cataleg>
+</practica2>

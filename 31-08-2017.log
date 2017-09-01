@@ -1,0 +1,33 @@
+31-08-2017|20:59:29:000316|1|NOTICE|setRootCollection(xmldb:exist://localhost:8080/exist/xmlrpc/db) -> Iniciat el procés de trobar la col·lecció arrel, establir la col·lecció punter en l'arrel i establir la uri que apunta a la bd.
+31-08-2017|20:59:29:000474|1|DEBUG|setRootCollection(xmldb:exist://localhost:8080/exist/xmlrpc/db) -> col.lecció arrel trobada, col·lecció punterestablida en l'arrel, uri de la bd trobada i establida.
+31-08-2017|20:59:29:000481|1|DEBUG|recursiveCollectionDisplayer(org.exist.xmldb.RemoteCollection@2d127a61) -> Recorrent la col·lecció /db.
+31-08-2017|20:59:29:000518|1|DEBUG|getCollection(/db/Pau) -> demanant la col·lecció indicada per paràmetre.
+31-08-2017|20:59:29:000537|1|DEBUG|recursiveCollectionDisplayer(org.exist.xmldb.RemoteCollection@70beb599) -> Recorrent la col·lecció /db/Pau.
+31-08-2017|20:59:29:000550|1|NOTICE|recursiveCollectionDisplayer(org.exist.xmldb.RemoteCollection@70beb599) -> Col·lecció  /db/Pau, recorrida amb èxit.
+31-08-2017|20:59:29:000551|1|DEBUG|getCollection(/db/pauCollection) -> demanant la col·lecció indicada per paràmetre.
+31-08-2017|20:59:29:000565|1|DEBUG|recursiveCollectionDisplayer(org.exist.xmldb.RemoteCollection@4e41089d) -> Recorrent la col·lecció /db/pauCollection.
+31-08-2017|20:59:29:000576|1|NOTICE|recursiveCollectionDisplayer(org.exist.xmldb.RemoteCollection@4e41089d) -> Col·lecció  /db/pauCollection, recorrida amb èxit.
+31-08-2017|20:59:29:000576|1|DEBUG|getCollection(/db/DaoSobreDao) -> demanant la col·lecció indicada per paràmetre.
+31-08-2017|20:59:29:000587|1|DEBUG|recursiveCollectionDisplayer(org.exist.xmldb.RemoteCollection@32a068d1) -> Recorrent la col·lecció /db/DaoSobreDao.
+31-08-2017|20:59:29:000597|1|NOTICE|recursiveCollectionDisplayer(org.exist.xmldb.RemoteCollection@32a068d1) -> Col·lecció  /db/DaoSobreDao, recorrida amb èxit.
+31-08-2017|20:59:29:000597|1|DEBUG|getCollection(/db/coleccionAModificar) -> demanant la col·lecció indicada per paràmetre.
+31-08-2017|20:59:29:000606|1|DEBUG|recursiveCollectionDisplayer(org.exist.xmldb.RemoteCollection@33cb5951) -> Recorrent la col·lecció /db/coleccionAModificar.
+31-08-2017|20:59:29:000614|1|NOTICE|recursiveCollectionDisplayer(org.exist.xmldb.RemoteCollection@33cb5951) -> Col·lecció  /db/coleccionAModificar, recorrida amb èxit.
+31-08-2017|21:00:00:000251|1|DEBUG|recursiveCollectionDisplayer(org.exist.xmldb.RemoteCollection@365c30cc) -> Recorrent la col·lecció /db.
+31-08-2017|21:00:00:000271|1|DEBUG|getCollection(/db/Pau) -> demanant la col·lecció indicada per paràmetre.
+31-08-2017|21:00:00:000281|1|DEBUG|recursiveCollectionDisplayer(org.exist.xmldb.RemoteCollection@701fc37a) -> Recorrent la col·lecció /db/Pau.
+31-08-2017|21:00:00:000291|1|NOTICE|recursiveCollectionDisplayer(org.exist.xmldb.RemoteCollection@701fc37a) -> Col·lecció  /db/Pau, recorrida amb èxit.
+31-08-2017|21:00:00:000292|1|DEBUG|getCollection(/db/pauCollection) -> demanant la col·lecció indicada per paràmetre.
+31-08-2017|21:00:00:000302|1|DEBUG|recursiveCollectionDisplayer(org.exist.xmldb.RemoteCollection@4148db48) -> Recorrent la col·lecció /db/pauCollection.
+31-08-2017|21:00:00:000310|1|NOTICE|recursiveCollectionDisplayer(org.exist.xmldb.RemoteCollection@4148db48) -> Col·lecció  /db/pauCollection, recorrida amb èxit.
+31-08-2017|21:00:00:000310|1|DEBUG|getCollection(/db/DaoSobreDao) -> demanant la col·lecció indicada per paràmetre.
+31-08-2017|21:00:00:000319|1|DEBUG|recursiveCollectionDisplayer(org.exist.xmldb.RemoteCollection@282003e1) -> Recorrent la col·lecció /db/DaoSobreDao.
+31-08-2017|21:00:00:000327|1|NOTICE|recursiveCollectionDisplayer(org.exist.xmldb.RemoteCollection@282003e1) -> Col·lecció  /db/DaoSobreDao, recorrida amb èxit.
+31-08-2017|21:00:00:000327|1|DEBUG|getCollection(/db/coleccionAModificar) -> demanant la col·lecció indicada per paràmetre.
+31-08-2017|21:00:00:000335|1|DEBUG|recursiveCollectionDisplayer(org.exist.xmldb.RemoteCollection@7fad8c79) -> Recorrent la col·lecció /db/coleccionAModificar.
+31-08-2017|21:00:00:000343|1|NOTICE|recursiveCollectionDisplayer(org.exist.xmldb.RemoteCollection@7fad8c79) -> Col·lecció  /db/coleccionAModificar, recorrida amb èxit.
+31-08-2017|21:00:12:000075|1|NOTICE|getCurrentCollection -> demanant Col·lecció actual, després de comprobarque està inicialitzada.
+31-08-2017|21:00:12:000076|1|NOTICE|getCurrentCollection -> demanant Col·lecció actual, després de comprobarque està inicialitzada.
+31-08-2017|21:01:12:000171|1|DEBUG|XMLquery(//country) -> Executant la query indicada per paràmetre.
+31-08-2017|21:01:20:000090|1|NOTICE|XMLquery(//country) -> Query indicada per paràmetre executada sense problemes.
+31-08-2017|21:03:29:000978|1|NOTICE|getCurrentCollection -> demanant Col·lecció actual, després de comprobarque està inicialitzada.

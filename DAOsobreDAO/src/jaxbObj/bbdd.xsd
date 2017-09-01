@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="practica2" type="practica2Type"/>
+  <xs:complexType name="EmpleatType">
+    <xs:sequence>
+      <xs:element name="id">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:minInclusive value="10000000"/>
+            <xs:maxInclusive value="99999999"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="nom">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-Z])*"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="cognoms">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-Z])*"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="anys_treballats">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="51"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="sou">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:minInclusive value="200"/>
+            <xs:maxInclusive value="60000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ClientType">
+    <xs:sequence>
+      <xs:element name="nif">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][a-z]"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="nom">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-Z])*"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="cognoms">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="([A-Z][a-z])*([A-Z][a-z])*"/> <!-- "([a-zA-Z])*"-->
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PersonasType">
+    <xs:sequence>
+      <xs:element type="EmpleatsType" name="Empleats"/>
+      <xs:element type="ClientsType" name="Clients"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="idType">
+    <xs:simpleContent>
+      <xs:extension base="xs:byte">
+        <xs:attribute name="preu_unitat_sense_iva" use="required">
+          <xs:simpleType>
+            <xs:restriction base="xs:float">
+              <xs:minInclusive value="0"/>
+              <xs:maxInclusive value="1000000"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute type="xs:unsignedShort" name="unitats" use="required"/>
+        <xs:attribute name="iva" use="required">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:enumeration value="0"/>
+              <xs:enumeration value="4"/>
+              <xs:enumeration value="10"/>
+              <xs:enumeration value="21"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="practica2Type">
+    <xs:sequence>
+      <xs:element type="PersonasType" name="Personas"/>
+      <xs:element type="FacturacioType" name="Facturacio"/>
+      <xs:element type="CatalegType" name="Cataleg"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ClientsType">
+    <xs:sequence>
+      <xs:element type="ClientType" name="Client" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EmpleatsType">
+    <xs:sequence>
+      <xs:element type="EmpleatType" name="Empleat" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="productesType">
+    <xs:sequence>
+      <xs:element type="idType" name="id" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CatalegType">
+    <xs:sequence>
+      <xs:element type="producteType" name="producte" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FacturaType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="client"/>
+      <xs:element type="productesType" name="productes"/>
+      <xs:element name="sense_iva">
+        <xs:simpleType>
+          <xs:restriction base="xs:float"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="iva">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="21"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="total">
+        <xs:simpleType>
+          <xs:restriction base="xs:double">
+            <xs:minInclusive value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:date" name="data" use="required"/>
+    <xs:attribute name="hora" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:minInclusive value="0"/>
+          <xs:maxInclusive value="23"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute  name="minut" use="required">
+    <xs:simpleType>
+      <xs:restriction base="xs:integer">
+        <xs:minInclusive value="0"/>
+        <xs:maxInclusive value="59"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:attribute>
+    <xs:attribute name="segon" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:integer">
+          <xs:minInclusive value="0"/>
+          <xs:maxInclusive value="59"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="FacturacioType">
+    <xs:sequence>
+      <xs:element type="FacturaType" name="Factura" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="producteType">
+    <xs:sequence>
+      <xs:element name="id">
+        <xs:simpleType>
+          <xs:restriction base="xs:unsignedShort"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="nom">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="preu">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:minInclusive value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="stock">
+        <xs:simpleType>
+          <xs:restriction base="xs:unsignedShort"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
